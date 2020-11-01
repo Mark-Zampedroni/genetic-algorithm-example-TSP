@@ -142,8 +142,8 @@ def tournamentSelection(prev_gen_fit):
     # tournament
     while (len(next_gen) < len(prev_gen_fit)):
         # probabilistic choices
-        f1 = min(random.choices(prev_gen_fit, k = K_TOURNAMENT), key = lambda i : i[1])[CHROMOSOME]
-        f2 = min(random.choices(prev_gen_fit, k = K_TOURNAMENT), key = lambda i : i[1])[CHROMOSOME]
+        f1 = min(random.sample(prev_gen_fit, K_TOURNAMENT))[CHROMOSOME]
+        f2 = min(random.sample(prev_gen_fit, K_TOURNAMENT))[CHROMOSOME]
         
         # crossover        
         p = crossOver(f1, f2)
