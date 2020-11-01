@@ -112,7 +112,8 @@ def splitPopulationFitness(population_fit):
     return population, fitness
 
 def getElitism(population, prob):
-    return
+    # it returns best chromosome in the population by %
+    return population[:int(N_POPULATION * prob)]
 
 def tournamentSelection(prev_gen_fit):
     return
