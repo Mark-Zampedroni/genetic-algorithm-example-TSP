@@ -116,7 +116,36 @@ def getElitism(population, prob):
     return population[:int(N_POPULATION * prob)]
 
 def tournamentSelection(prev_gen_fit):
-    return
+    next_gen = []
+    prev_gen, prev_fit = splitPopulationFitness(prev_gen_fit)
+    
+    # elitism call
+    for e in getElitism(prev_gen, P_ELITISM):
+        next_gen.append(e)
+
+    # tournament
+    while (len(next_gen) < len(prev_gen_fit)):
+        # probabilistic choices
+        f1 = min(random.choices(prev_gen_fit, k = K_TOURNAMENT), key = lambda i : i[1])[CHROMOSOME]
+        f2 = min(random.choices(prev_gen_fit, k = K_TOURNAMENT), key = lambda i : i[1])[CHROMOSOME]
+        
+        # crossover        
+        p = crossOver(f1, f2)
+
+        # mutation
+        mutate(p[0])
+        mutate(p[1])
+
+        # new offsprings
+        next_gen.append(p[0])
+        next_gen.append(p[1])
+    
+    # worst chromosome deleted if population is odd
+    while (len(next_gen) != len(prev_gen)):
+        next_gen_fit = getPopulationFitness(next_gen)
+        next_gen.remove(next_gen_fit[len(next_gen_fit) - 1][CHROMOSOME])
+
+    return next_gen
 
 def getNextGeneration(population):
     return
