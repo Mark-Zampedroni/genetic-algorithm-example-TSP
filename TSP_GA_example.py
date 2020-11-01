@@ -80,7 +80,23 @@ def showScore(pen,route):
     pen.write("Path length: "+str(int(getFitness(route))), font=("Arial", 16, "normal"))
 
 def crossOver(father,mother):
-    return
+    children = [[] for x in range(2)]
+
+    for i in range(0,len(mother)):
+        children[0].append(mother[i])
+        children[1].append(father[i])
+
+    if(random.random() < P_CROSSOVER):
+        a_range = random.randrange(0, int(len(mother) / 2))
+        b_range = random.randrange(a_range, len(mother) - 1)
+
+        shift = 0
+        for i in range(a_range, b_range + 1):
+            children[0][i] = mother[b_range - shift]
+            children[1][i] = father[b_range - shift]
+            shift += 1
+    
+    return children
 
 def mutate(this):
     if(random.random() < P_MUTATION):
