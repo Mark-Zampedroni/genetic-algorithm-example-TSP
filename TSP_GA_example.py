@@ -118,10 +118,7 @@ def tournamentSelection(prev_gen_fit):
     return
 
 def getNextGeneration(population):
-    bestPreviousOnes = getPopulationFitness(population)
-    children = tournamentSelection(bestPreviousOnes)
-
-    return children, bestPreviousOnes[0][0]  
+    return
 
 def getNewPopulation(cities):
     if not IS_CIRCLE:
