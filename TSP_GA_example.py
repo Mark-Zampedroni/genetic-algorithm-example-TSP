@@ -148,7 +148,10 @@ def tournamentSelection(prev_gen_fit):
     return next_gen
 
 def getNextGeneration(population):
-    return
+    bestPreviousOnes = getPopulationFitness(population)
+    children = tournamentSelection(bestPreviousOnes)
+
+    return children, bestPreviousOnes[0][0]
 
 def getNewPopulation(cities):
     if not IS_CIRCLE:
@@ -177,7 +180,7 @@ for i in range(0,MAX_GENERATIONS):
     if(i%REFRESH_FREQUENCY == 0):
         displayRoute(t,bestPreviousOne)
         showScore(t,bestPreviousOne)
-        print "Population n. "+str(i)
+        print("Population n. " + str(i))
         time.sleep(0.1)
     turtle.update()
 
