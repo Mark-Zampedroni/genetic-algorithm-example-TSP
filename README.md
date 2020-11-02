@@ -8,7 +8,7 @@ The script works both on python 2.7 and 3. The only dependency is turtle, used f
 ## Model
 An acceptable solution is an [Hamiltonian path](https://en.wikipedia.org/wiki/Hamiltonian_path) that cycles on the N nodes. Using the [permutation encoding](https://www.obitko.com/tutorials/genetic-algorithms/encoding.php) paradigm it's representable as an array of length N containing at every i-th position (from 1 to N) the label of the node to visit at the step i. One array is regarded as an individual in the GAs context.
 
-The algorithm starts with a population of ```N_POPULATION``` inviduals, each individual is of length ```N_CITIES``` and generated randomly (abiding to the rules of Hamiltonian paths). 
+The algorithm starts with a population of ```N_POPULATION``` inviduals, each individual is of length ```N_CITIES``` (N) and generated randomly (abiding to the rules of Hamiltonian paths). 
 
 - The fitness function uses the total length of the path to score the quality of each individual.
 - Selection occurs through a [tournament](https://en.wikipedia.org/wiki/Tournament_selection) of size ```K_TOURNAMENT``` and uniform probability.
