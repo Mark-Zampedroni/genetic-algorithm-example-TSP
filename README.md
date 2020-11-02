@@ -6,10 +6,18 @@ By no means the aim was to write a well performing algorithm, it's only intended
 The script works both on python 2.7 and 3. The only dependency is turtle, used for the graphical methods and easily installable through pip.
 
 ## Model
-x
+An acceptable solution is an [Hamiltonian path](https://en.wikipedia.org/wiki/Hamiltonian_path) that cycles on the N nodes. Using the [permutation encoding](https://www.obitko.com/tutorials/genetic-algorithms/encoding.php) paradigm it's representable as an array of length N containing at every i-th position (from 1 to N) the label of the node to visit at the step i. One array is regarded as an individual in the GAs context.
+
+The algorithm starts with a population of ```N_POPULATION``` inviduals, each individual is of length ```N_CITIES``` and generated randomly (abiding to the rules of Hamiltonian paths). 
+
+- The fitness function uses the total length of the path to score the quality of each individual.
+- Selection occurs through a [tournament](https://en.wikipedia.org/wiki/Tournament_selection) of size ```K_TOURNAMENT``` and uniform probability.
+- Crossover is a [single point crossover](https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)) and takes place between the ```P_ELITISM * N_POPULATION``` of best fit individuals .
+- Mutation is a [bit string mutation](https://en.wikipedia.org/wiki/Mutation_(genetic_algorithm)) that swaps two values in the array.
+
 
 ## Examples
-The following two examples are both replicable (with a different seed) using the provided [TSP_GA_example.py](https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/TSP_GA_example.py) script. All the parameters are freely changeable, different values will result in better/worse solutions. The disposition of the points (cities) can swap between circular and random through the constant ```IS_CIRCLE```.
+The following two examples are both replicable (with a different seed) using the provided [TSP_GA_example.py](https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/TSP_GA_example.py) script. All the parameters are freely modifiable, different values will result in better/worse solutions. The disposition of the points (vertices, cities) can swap between circular and random changing the constant ```IS_CIRCLE```.
 
 ### E.g 1, Circular disposition
 x
