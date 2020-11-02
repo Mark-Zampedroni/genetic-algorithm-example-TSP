@@ -15,16 +15,19 @@ The algorithm starts with a population of ```N_POPULATION``` inviduals, each ind
 - Crossover is a [single point crossover](https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)) and takes place between the ```P_ELITISM * N_POPULATION``` of best fit individuals .
 - Mutation is a [bit string mutation](https://en.wikipedia.org/wiki/Mutation_(genetic_algorithm)) that swaps two values in the array.
 
-
 ## Examples
 The following two examples are both results (with a different seed) of the provided [TSP_GA_example.py](https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/TSP_GA_example.py) script. All the parameters are freely modifiable, different values will result in better/worse solutions. The disposition of the points (vertices, cities) can swap between circular and random changing the constant ```IS_CIRCLE```.
 
-E.g 1 and 2 show the images (read from left to right) of the best individual of the first generation and then generations 1500th, 3000th and 6000th.
+E.g 1 and 2 use 100 nodes with a population of 300 individuals.
+
+The images (read from left to right) are the best individual of the 1st, 1500th, 3000th and 6000th generation.
+
+The time needed to elapse 6000 generations on a 4RAM/2.2GHz computer with no other processes open is < 5 minutes. If graphical updates are removed the time improves remarkably. 
 
 ### E.g 1, Circular disposition
 The nodes are placed in circle to highlight the improvements of each generation, it's visibly obvious that the best possible Hamiltonian path is the one that draws the circle itself and in this example, using a circle radius of 200p, the global optimum length (the circumference) is 1256p. 
 
-Each image shows the best individual of its generation:
+Best individual of the 1st, 1500th, 3000th and 6000th generation:
 
 <p align="center" width="100%">
     <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
@@ -36,4 +39,19 @@ Each image shows the best individual of its generation:
 </p>
 
 ### E.g 2, Random disposition
-x
+Same as the previous example, but the placement of the nodes is randomized and it's harder for humans to predict the best global solution.
+
+Best individual of the 1st, 1500th, 3000th and 6000th generation:
+
+<p align="center" width="100%">
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR1p.png"> 
+</p>
+<p align="center" width="100%">
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR1500p.png"> 
+</p>
+<p align="center" width="100%">
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR3000p.png">  
+</p>
+<p align="center" width="100%">
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR6000p.png"> 
+</p>
