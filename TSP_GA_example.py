@@ -3,7 +3,6 @@
 
 import turtle
 import math
-import time
 import random
 
 # Number of cities
@@ -20,7 +19,7 @@ P_ELITISM = 0.05
 K_TOURNAMENT = 3
 
 # Max number of generations before stopping
-MAX_GENERATIONS = 10000
+MAX_GENERATIONS = 100000
 # Number of populations between updating graphically the best solution 
 REFRESH_FREQUENCY = 10
 
@@ -29,23 +28,9 @@ IS_CIRCLE = True
 
 CHROMOSOME = 0
 
-def getRandomPoints(pointsNum):
-    points = []
-    for i in range(pointsNum):
-        while(True):
-            x = random.randrange(-500, 500)
-            y = random.randrange(-150, 300)
-            if ([x,y] not in points):
-                break
-        points.append([x,y])
-    return points
-
-
-def getCirclePoints(pointsNum,r):
-    points = []
-    for i in range(pointsNum):
-        points.append([r*math.cos((i*2*math.pi)/pointsNum),r*math.sin((i*2*math.pi)/pointsNum)])
-    return points
+"""
+Graphical representation methods
+"""
 
 def drawCircle(pen,r): 
     pen.fillcolor('red')  
@@ -78,6 +63,32 @@ def showScore(pen,route):
     pen.goto(-90,-250)
     pen.down()
     pen.write("Path length: "+str(int(getFitness(route))), font=("Arial", 16, "normal"))
+
+"""
+Population generation methods
+"""
+
+def getRandomPoints(pointsNum):
+    points = []
+    for i in range(pointsNum):
+        while(True):
+            x = random.randrange(-500, 500)
+            y = random.randrange(-150, 300)
+            if ([x,y] not in points):
+                break
+        points.append([x,y])
+    return points
+
+
+def getCirclePoints(pointsNum,r):
+    points = []
+    for i in range(pointsNum):
+        points.append([r*math.cos((i*2*math.pi)/pointsNum),r*math.sin((i*2*math.pi)/pointsNum)])
+    return points
+
+"""
+GA methods
+"""
 
 def crossOver(father,mother):
     children = [[] for x in range(2)]
@@ -181,7 +192,11 @@ def getNewPopulation(cities):
         newRoute = p[:] 
         population.append(newRoute)
     return population
- 
+
+"""
+Graphical init with turtle and main loop
+"""
+
 #Turtle init
 turtle.Screen().setup(width=1200, height=800, startx=740, starty=40)
 t = turtle.Turtle()
@@ -191,18 +206,14 @@ t.tracer(0, 0)
 
 population = getNewPopulation(N_CITIES)
 
+# Each i is a new generation of solutions
 for i in range(0,MAX_GENERATIONS):
     population, bestPreviousOne = getNextGeneration(population)
-    if(i%REFRESH_FREQUENCY == 0):
+    # every REFRESH_FREQUENCY generations the best solution is graphically
+    if(i%REFRESH_FREQUENCY == 0):  
         displayRoute(t,bestPreviousOne)
         showScore(t,bestPreviousOne)
         print("Population n. " + str(i))
-        time.sleep(0.1)
     turtle.update()
 
 turtle.done()
-
-
-        
-    
-
