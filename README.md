@@ -1,7 +1,7 @@
 <h1 align="center"><b>Example of Genetic Algorithm application to TSP</b></h1>
 
 The idea is to provide an easy, short and non-optimized example of an approximate solution to the [TSP](https://en.wikipedia.org/wiki/Travelling_salesman_problem) through a [Genetic Algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm). 
-By no means the aim was to write a well performing algorithm, it's only intended as an example of GAs (from students for students) to give an hint of their applicability in solving NP-hard problems. 
+By no means the aim was to write a well performing algorithm, it's only intended as an example of GAs (from students for students) to give a showcase of their applicability in solving NP-hard problems. 
 
 The script works both on python 2.7 and 3. The only dependency is turtle, used for the graphical methods and easily installable through pip.
 
