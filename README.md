@@ -17,7 +17,7 @@ The algorithm starts with a population of ```N_POPULATION``` inviduals, each ind
 
 
 ## Examples
-The following two examples are both replicable (with a different seed) using the provided [TSP_GA_example.py](https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/TSP_GA_example.py) script. All the parameters are freely modifiable, different values will result in better/worse solutions. The disposition of the points (vertices, cities) can swap between circular and random changing the constant ```IS_CIRCLE```.
+The following two examples are both results (with a different seed) of the provided [TSP_GA_example.py](https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/TSP_GA_example.py) script. All the parameters are freely modifiable, different values will result in better/worse solutions. The disposition of the points (vertices, cities) can swap between circular and random changing the constant ```IS_CIRCLE```.
 
 ### E.g 1, Circular disposition
 x
