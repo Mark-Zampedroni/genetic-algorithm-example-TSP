@@ -20,7 +20,18 @@ The algorithm starts with a population of ```N_POPULATION``` inviduals, each ind
 The following two examples are both results (with a different seed) of the provided [TSP_GA_example.py](https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/TSP_GA_example.py) script. All the parameters are freely modifiable, different values will result in better/worse solutions. The disposition of the points (vertices, cities) can swap between circular and random changing the constant ```IS_CIRCLE```.
 
 ### E.g 1, Circular disposition
-x
+The nodes are placed in circle to highlight the improvements of each generation, it's visibly obvious that the best possible Hamiltonian path is the one that draws the circle itself and in this example, using a circle radius of 200p, the global optimum length (the circumference) is 1256p. 
+
+Each image shows the best individual of its generation:
+
+<p align="center" width="100%">
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
+</p>
+<p align="center" width="100%">
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
+</p>
 
 ### E.g 2, Random disposition
 x
