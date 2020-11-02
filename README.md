@@ -20,14 +20,12 @@ The following two examples are both results (with a different seed) of the provi
 
 E.g 1 and 2 use 100 nodes with a population of 300 individuals.
 
-The images (read from left to right) are the best individual of the 1st, 1500th, 3000th and 6000th generation.
-
 The time needed to elapse 6000 generations on a 4RAM/2.2GHz computer with no other processes open is < 5 minutes. If graphical updates are removed the time improves remarkably. 
 
 ### E.g 1, Circular disposition
 The nodes are placed in circle to highlight the improvements of each generation, it's visibly obvious that the best possible Hamiltonian path is the one that draws the circle itself and in this example, using a circle radius of 200p, the global optimum length (the circumference) is 1256p. 
 
-Best individual of the 1st, 1500th, 3000th and 6000th generation:
+Best individual of the 1st, 1500th, 3000th and 6000th generation (read from left to right):
 
 <p align="center" width="100%">
     <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
