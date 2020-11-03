@@ -12,7 +12,7 @@ The algorithm starts with a population of ```N_POPULATION``` inviduals, each ind
 
 - The fitness function uses the total length of the path to score the quality of each individual.
 - Selection occurs through a [tournament](https://en.wikipedia.org/wiki/Tournament_selection) of size ```K_TOURNAMENT``` and uniform probability.
-- Crossover is a [single point crossover](https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)) and takes place between the ```P_ELITISM * N_POPULATION``` of best fit individuals .
+- Crossover is a [single point crossover](https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)) and takes place between the ```P_ELITISM * N_POPULATION``` of best fit individuals.
 - Mutation is a [bit string mutation](https://en.wikipedia.org/wiki/Mutation_(genetic_algorithm)) that swaps two values in the array.
 
 ## Examples
