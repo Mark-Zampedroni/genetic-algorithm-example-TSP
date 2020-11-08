@@ -209,7 +209,7 @@ population = getNewPopulation(N_CITIES)
 # Each i is a new generation of solutions
 for i in range(0,MAX_GENERATIONS):
     population, bestPreviousOne = getNextGeneration(population)
-    # every REFRESH_FREQUENCY generations the best solution is graphically
+    # every REFRESH_FREQUENCY generations the best solution is updated graphically
     if(i%REFRESH_FREQUENCY == 0):  
         displayRoute(t,bestPreviousOne)
         showScore(t,bestPreviousOne)
