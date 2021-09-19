@@ -28,12 +28,12 @@ The nodes are placed in circle to highlight the improvements of each generation,
 Best individual of the 1st, 1500th, 3000th and 6000th generation (read from left to right):
 
 <p align="center" width="100%">
-    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1p.png"> 
-    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC1500.png"> 
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/cricle/GC1p.png"> 
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/cricle/GC1500.png"> 
 </p>
 <p align="center" width="100%">
-    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC3000p.png"> 
-    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/cricle/GC6000p.png"> 
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/cricle/GC3000p.png"> 
+    <img width="40%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/cricle/GC6000p.png"> 
 </p>
 
 ### E.g 2, Random disposition
@@ -42,14 +42,14 @@ Same as the previous example, but the placement of the nodes is randomized and i
 Best individual of the 1st, 1500th, 3000th and 6000th generation:
 
 <p align="center" width="100%">
-    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR1p.png"> 
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/random/GR1p.png"> 
 </p>
 <p align="center" width="100%">
-    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR1500p.png"> 
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/random/GR1500p.png"> 
 </p>
 <p align="center" width="100%">
-    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR3000p.png">  
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/random/GR3000p.png">  
 </p>
 <p align="center" width="100%">
-    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/main/images/random/GR6000p.png"> 
+    <img width="70%" src="https://github.com/Mark-Zampedroni/genetic-algorithm-example-TSP/blob/master/images/random/GR6000p.png"> 
 </p>
